@@ -1,0 +1,138 @@
+<style>
+    body {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .row h3 {
+        font-weight: 600;
+        font-size: 27px;
+    }
+
+    .row ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .row ul li {
+        padding-bottom: 10px;
+    }
+
+    .row ul i {
+        list-style-type: none;
+        font-size: 20px;
+        padding-right: 4px;
+        color: #5fcf80;
+    }
+</style>
+
+<section ng-show="student==null" class="rounded-lg mb-4"
+    style="background-image: url(assets/img/hero-bg.jpg); background-repeat: no-repeat;background-position: center; background-size: cover; ">
+    <div class="d-flex align-items-center" style="margin-top: 130px;">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 offset-lg-1  text-lg-left white-text mt-12 mt-md-12">
+                <h1 class="intro-title font-weight-bold mt-sm-5 mt-0 mb-10 wow fadeInLeft" data-wow-delay="0.3s">Học hôm
+                    nay, cho ngày mai</h1>
+                <h6 class="mb-4 wow fadeInLeft" data-wow-delay="0.3s">Học tập đơn giản là hạt giống của kiến thức, kiến thức là hạt giống của hạnh phúc</h6>
+                <!-- <a ng-click="intro=0" href="#!login" class="btn btn-white btn-rounded blue-text font-weight-bold ml-lg-0 wow fadeInLeft" data-wow-delay="0.4s">Đăng nhập</a> -->
+                <a ng-click="intro=0" href="#!register"
+                    class="btn btn-success btn-rounded white-text font-weight-bold ml-lg-0 wow fadeInLeft"
+                    data-wow-delay="0.4s">Học ngay</a><br><br><br>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="light-text p-5 rgba-white-strong" style="margin-top: 0; margin-bottom: 0;">
+
+    <div class="row">
+        <!-- <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+        </div> -->
+        <div class="col-lg-6 order-1 order-lg-2" style="min-height: 500px;">
+            <div class="view overlay rounded z-depth-1 d-flex justify-content-center white"
+                style="background-position: center;background-repeat: repeat-x;background-size: 100%;">
+                <img src="img/about.jpg" class="img-fluid">
+            </div>
+
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>Chúng tôi mong muốn trở thành một tổ chức góp phần tạo nên sự thay đổi đó, và việc tạo ra cộng
+                đồng học lập trình cùng nhau phát triển.</h3>
+            <p class="fst-italic">
+                Chúng tôi đang nỗ lực tạo ra các khóa học có nội dung chất lượng vượt trội, giúp học viên sau khi hoàn
+                thành khóa học có thể trở thành những lập trình viên luôn được nhiều công ty săn đón. Khi học tại đây
+                bạn sẽ được rèn luyện:
+            </p>
+            <ul>
+                <li><i class="bi bi-check-circle"></i> 1. Sự thành thạo.</li>
+                <li><i class="bi bi-check-circle"></i> 2. Tính tự học.</li>
+                <li><i class="bi bi-check-circle"></i> 3. Tiết kiệm thời gian.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Grid row -->
+    <div class="row">
+        <div class="section-title">
+            <h2>Khóa học</h2>
+            <p>Khóa học phổ biến</p>
+        </div>
+        
+        <div class="row text-center">
+            <div class="col-md-4 mb-4" style="min-height: 500px;">
+                <div class="view overlay rounded z-depth-1 d-flex justify-content-center white"
+                    style="background-position: center;background-repeat: repeat-x;background-size: 100%;">
+                    <img src="img/logos/DBBS.png" class="img-fluid w-50" alt="Sample project image">
+                    <a>
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+    
+                <div class="px-3 pt-3 mx-1 mt-1 pb-0">
+    
+                    <h4 class="font-weight-bold mb-3">Cơ sở dữ liệu</h4>
+                    <p class="text-muted">Bài thi gồm kiến thức đã học trong môn Cơ sở dữ liệu</p>
+                    <a href="#!viewtest/DBBS" class="btn btn-success btn-rounded btn-md"> Chi tiết</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" style="min-height: 500px;">
+                <div class="view overlay rounded z-depth-1 d-flex justify-content-center white"
+                    style="background-position: center;background-repeat: repeat-x;background-size: 100%;">
+                    <img src="img/logos/GAME.png" class="img-fluid w-50" alt="Sample project image">
+                    <a>
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+    
+                <div class="px-3 pt-3 mx-1 mt-1 pb-0">
+    
+                    <h4 class="font-weight-bold mb-3">Lập trình game 2D</h4>
+                    <p class="text-muted">Bài thi gồm kiến thức đã học trong môn Lập trình game 2D</p>
+                    <a href="#!viewtest/GAME" class="btn btn-success btn-rounded btn-md"> Chi tiết</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" style="min-height: 500px;">
+                <div class="view overlay rounded z-depth-1 d-flex justify-content-center white"
+                    style="background-position: center;background-repeat: repeat-x;background-size: 100%;">
+                    <img src="img/logos/HTCS.jpg" class="img-fluid w-50" alt="Sample project image">
+                    <a>
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+    
+                <div class="px-3 pt-3 mx-1 mt-1 pb-0">
+    
+                    <h4 class="font-weight-bold mb-3">HTML5 và CSS3</h4>
+                    <p class="text-muted">Bài thi gồm kiến thức đã học trong môn HTML5 và CSS3</p>
+                    <a href="#!viewtest/HTCS" class="btn btn-success btn-rounded btn-md"> Chi tiết</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+

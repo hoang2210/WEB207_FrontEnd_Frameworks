@@ -1,0 +1,130 @@
+<style>
+    body {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
+<section>
+    <div class="col-lg-10 m-auto">
+        <div class="card card-cascade narrower">
+
+            <div class="view view-cascade gradient-card-header"
+                style="background-color: rgb(110, 236, 110); background-position: center;background-repeat: no-repeat;background-size: cover;">
+
+                <h2 class="card-header-title">Quản trị tài khoản</h2>
+
+            </div>
+            <!-- <div ng-show="isLoading" class="loading">
+                <div class="spinner-border text-primary spinner-center" role="status">
+                </div>
+            </div> -->
+            <form ng-submit="onSubmitForm($event)" action="" class="col-8 offset-2" name="quantri">
+                <div class="form-group mt-3">
+                    <label for="">Username:</label>
+                    <input class="form-control" minlength="5" name="username" type="text" ng-model="student.username" required> 
+                    <small ng-show="quantri.username.$error.minlength" id="username"
+                    class="form-text text-danger">Tài khoản không dưới 5 kí tự</small>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="">Password:</label>
+                    <input class="form-control" minlength="6" name="password" type="text" ng-model="student.password" required>
+                    <small ng-show="quantri.password.$error.minlength" id="password"
+                        class="form-text text-danger">Mật khẩu phải hơn 6 kí tự</small>
+                </div>
+                <!-- <div class="md-form md-outline">
+                    <input minlength="6" name="password" ng-model="studentR.password" type="password" id="password"
+                        class="form-control border-green" required>
+                    <small ng-show="frmRegister.password.$error.minlength" id="password"
+                        class="form-text text-danger">Mật khẩu phải hơn 6 kí tự</small>
+                </div> -->
+                <div class="form-group mt-3">
+                    <label for="">Họ tên:</label>
+                    <input class="form-control" minlength="5" name="fullname" type="text" ng-model="student.fullname" required>
+                    <small ng-show="quantri.fullname.$error.minlength"
+                            class="form-text text-danger">Không được dưới 5 kí tự</small>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="">Email</label>
+                    <input class="form-control" name="email" ng-model="student.email" type="email" required>
+                    <small ng-show="quantri.email.$error.email" class="form-text text-danger">Không đúng định
+                        dạng email</small>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="">Học phí</label>
+                    <input name="schoolfee" class="form-control" type="number" ng-model="student.schoolfee" required min="2000000" required>
+                    <small ng-show="quantri.schoolfee.$error.min" id="schoolfee"
+                            class="form-text text-danger">Học phí phải hơn 2 triệu</small>
+                </div>
+
+                <div class="form-group mt-3">
+                    <button ng-disabled="quantri.$invalid" class="btn btn-success">Lưu</button>
+                    <button ng-click="onUpdate()" type="button" class="btn btn-primary">Sửa</button>
+                    <button type="reset" class="btn btn-default ml-3">Xóa form</button>
+                </div>
+            </form>
+            <!-- offset-2 -->
+            <div class="col-12"> 
+                <table class="table mt-3">
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Họ tên</th>
+                            <th>Email</th>
+                            <th>Học phí</th>
+                            <th colspan="2">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="sv in students">
+                            <td>{{ sv.username }}</td>
+                            <td>{{ sv.password }}</td>
+                            <td>{{ sv.fullname }}</td>
+                            <td>{{ sv.email }}</td>
+                            <td>{{ sv.schoolfee }}</td>
+                            <td>
+                                <button class="btn btn-primary" ng-click="edit($index)">Sửa</button>
+                            </td>
+                            <td>
+                                <button ng-click="onDelete(sv.id, $index)" class="btn btn-danger" data-bs-toggle="modal"
+                                    data-bs-target="#modal_delete_{{ sv.id }}">Xóa</button>
+
+                                <!-- <div class="modal fade" id="modal_delete_{{ sv.id }}" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Xóa</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Xác nhận xóa?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Đóng</button>
+                                                <button type="button" ng-click="onDelete(sv.id, $index)"
+                                                    class="btn btn-danger">Xóa</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#">{{ i }}</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</section>

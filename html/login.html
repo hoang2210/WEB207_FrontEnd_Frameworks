@@ -1,0 +1,45 @@
+<style>
+    body {
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+</style>
+<section>
+    <div class="col-lg-5 m-auto">
+        <div class="card card-cascade narrower">
+
+            <div class="view view-cascade gradient-card-header" style="background-color: rgb(110, 236, 110); background-position: center;background-repeat: no-repeat;background-size: cover;">
+                <h2 class="card-header-title">Đăng nhập</h2>
+            </div>
+
+            <div class="card-body card-body-cascade px-5 py-3">
+
+                <form name="frmLogin" id="frmLogin">
+                    <div class="md-form md-outline">
+                        <i class="fas fa-user prefix green-text"></i>
+                        <input name="username" ng-model="username" type="text" id="username" class="form-control border-success" required maxlength="25">
+                        <label class="bg-white green-text rounded px-2 ml-5" for="username"> <strong>Tài khoản</strong> </label>
+                    </div>
+
+                    <div class="md-form md-outline" style="margin-bottom: 0;">
+                        <i class="fas fa-lock prefix green-text"></i>
+                        <input name="password" ng-model="password" type="password" id="password" class="form-control border-success" required maxlength="25">
+                        <label class="bg-white green-text rounded px-2 ml-5" for="password"> <strong>Mật khẩu</strong> </label>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p> <a ng-click="intro=0" href="#!forgotpassword">Quên mật khẩu?</a> hoặc <a ng-click="intro=0" href="#!register">Đăng ký</a></p>
+                        </div>            
+                    </div>
+                    <div class="text-center mt-4">
+                        <button ng-click='login()' ng-disabled="frmLogin.$invalid" class="btn btn-success btn-rounded">Đăng nhập</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</section>

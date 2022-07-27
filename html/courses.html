@@ -1,0 +1,61 @@
+<style>
+    body {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .row h3 {
+        font-weight: 600;
+        font-size: 27px;
+    }
+
+    .row ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .row ul li {
+        padding-bottom: 10px;
+    }
+
+    .row ul i {
+        list-style-type: none;
+        font-size: 20px;
+        padding-right: 4px;
+        color: #5fcf80;
+    }
+</style>
+
+
+<section class="dark-grey-text p-5 rgba-white-strong">
+
+    <!-- Grid row -->
+    <div class="row">
+        <div class="section-title">
+            <h2>Khóa học</h2>
+            <p>Tất cả khóa học</p>
+    </div>
+    <div class="row text-center">
+
+        <div ng-repeat="sj in subjects| limitTo:21:cout" class="col-md-6 mb-4" style="min-height: 500px;">
+
+            <div class="view overlay rounded z-depth-1 d-flex justify-content-center white" style="background-position: center;background-repeat: repeat-x;background-size: 100%;">
+                <img src="img/logos/{{sj.Logo}}" class="img-fluid w-50" alt="Sample project image">
+                <a>
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+
+            <div class="px-3 pt-3 mx-1 mt-1 pb-0">
+                
+                <h4 class="font-weight-bold mb-3">{{sj.Name}}</h4>
+                <p class="text-muted">Bài thi gồm kiến thức đã học trong môn {{sj.Name}}</p>
+                <a href="#!viewtest/{{sj.Id}}" class="btn btn-success btn-rounded btn-md"> Chi tiết</a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
